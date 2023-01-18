@@ -9,7 +9,8 @@ export function Navigation({ className }) {
 
   // Old Query
   const {
-    allShopifyProduct: { productTypes }, allShopifyCollection: { collectionNames }
+    // allShopifyProduct: { productTypes }, 
+    allShopifyCollection: { collectionNames }
   } = useStaticQuery(graphql`
       {
         allShopifyProduct {
@@ -22,8 +23,6 @@ export function Navigation({ className }) {
   `)
 
   // console.log(data)
-  console.log(productTypes)
-  console.log(collectionNames)
 
   return (
     <nav className={[navStyle, className].join(" ")}>
